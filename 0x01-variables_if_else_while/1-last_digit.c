@@ -12,7 +12,7 @@
 int main(void)
 {
 	int n;
-	frand(time(0));
+	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
 	int lastDigit = n % 10;
