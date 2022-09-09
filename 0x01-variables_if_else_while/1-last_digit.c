@@ -15,7 +15,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/*your code goes there*/
-#include <stdio.h>
+	#include <stdio.h>
 	int lastDigit = n % 10;
 	char *str = "Last digit of";
 
@@ -29,7 +29,7 @@ int main(void)
 	}
 	else if (lastDigit < 6 && lastDigit!= 0)
 	{
-		printf("%s %d is %d and is less than 6 aand not 0\n", str, n, lastDigit);
+		printf("%s %d is %d and is less than 6 and not 0\n", str, n, lastDigit);
 	}
 	return (0);
 }
