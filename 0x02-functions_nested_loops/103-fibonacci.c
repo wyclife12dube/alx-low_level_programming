@@ -22,7 +22,6 @@ int main(void)
 		{
 			tot_sum += fibsum;
 		}
-		
 		fib1 = fib2;
 		fib2 = fibsum;
 	}
