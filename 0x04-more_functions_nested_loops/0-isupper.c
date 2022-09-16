@@ -1,17 +1,18 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * _isupper - checks if a charactor is uppercase or not
- * @c: charactor to be tested
- * Return: 1 whatever it is, 0 otherwise
- */
-
-int _isupper(int c)
+  * _isupper - Check if a letter is upper
+  * @x: The number to be checked
+  *
+  * Return: 1 for upper letter or 0 for any else
+  */
+int _isupper(int x)
 {
-	if ((c >= 'A') && (c <= 'Z'))
+	if (x >= 65 && x <= 90)
 	{
 		return (1);
 	}
 
 	return (0);
 }
+
