@@ -1,7 +1,7 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * print_number - print an integer using only _putchar
+ * print_number - Print an integer using only _putchar
  * @n: integer to print
  */
 
@@ -25,11 +25,12 @@ void print_number(int n)
 		power *= 10;
 		hold /= 10;
 	}
+
 	while (power > 0)
 	{
 		if (power > 9)
 		{
-			if  (!neg)
+			if (!neg)
 				_putchar((n / power % 10) + '0');
 			else
 				_putchar((n / power % 10) * -1 + '0');

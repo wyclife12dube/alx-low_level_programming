@@ -1,14 +1,15 @@
 #include "main.h"
-
 /**
- * leet - replaces numbers with letters
- * @z: the string to be looked at
+ * leet - replaces a bunch of numbers with letters
+ *
+ * @z: the string to look at
+ *
  * Return: the new string
  */
 
 char *leet(char *z)
 {
-	char arr[] = {'a', 'A', 'e', 'E', 'o', '0', 't', 'T', 'l', 'L'};
+	char arr[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 	char replace[] = {'4', '3', '0', '7', '1'};
 	int i, j;
 
