@@ -7,27 +7,23 @@
  */
 char *cap_string(char *str)
 {
-	int index = 0;
+	int i = 0;
+	int j;
+	char dubWyc[] = " \n\t,;.!?\"(){}";
 
-	while (str[++index])
+	if (z[0] >= 'a' && z[0] <= 'z')
+		z[0] -= 32;
+
+	for (; z[i] != '\0'; i++)
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-
-		if (str[index - 1] == ' ' ||
-				str[index - 1] == '\t' ||
-				str[index - 1] == '\n' ||
-				str[index - 1] == ',' ||
-				str[index - 1] == ';' ||
-				str[index - 1] == '.' ||
-				str[index - 1] == '!' ||
-				str[index - 1] == '?' ||
-				str[index - 1] == '"' ||
-				str[index - 1] == '(' ||
-				str[index - 1] == ')' ||
-				str[index - 1] == '{' ||
-				str[index - 1] == '}')
-			str[index] -= 32;
+		for (j = 0; j < 14; j++)
+		{
+			if (z[i] == dubWyc[j])
+			{
+				if (z[i + 1] >= 'a' && z[i + 1] <= 'z')
+					z[i + 1] -= 32;
+			}
+		}
 	}
-	return (str);
+	return (z);
 }
