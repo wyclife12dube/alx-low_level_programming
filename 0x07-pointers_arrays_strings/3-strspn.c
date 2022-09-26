@@ -6,7 +6,7 @@
  * @accept: the prefix to be measured
  *
  * Return: the number of bytes in s which consists only
- * 	consist of bytes from accept
+ * consist of bytes from accept
  */
 
 unsigned int _strspn(char *s, char *accept)
