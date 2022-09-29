@@ -16,4 +16,6 @@ int is_prime(int n, int start);
 void check(char *s, int start, int end, int *flag);
 int wildcmp(char *s1, char *s2);
 
+// you did not define this prototype
+int is_palindrome(char *s);
 #endif
