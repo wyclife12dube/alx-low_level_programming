@@ -2,44 +2,58 @@
 #include <stdlib.h>
 
 /**
- * str_concat - a function that concatinates two strings
- * @s1: input
- * @s2: input
- * Return: concat of s1 and s2
+ * _strlen - counts arrays
+ * @s: array of elements
+ *
+ * Return: 1
+ */
+
+int _strlen(char *s)
+{
+	unsigned int i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+/**
+ * str_concat - back a pointer to array
+ * @s1: first array
+ * @s2: second array
+ *
+ * Return: array always
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	char *concat;
-	int i, ji;
+	char *dst;
+	unsigned int i, j, size;
 
 	if (s1 == NULL)
 		s1 = "";
+
 	if (s2 == NULL)
 		s2 = "";
 
-	i = ji = 0;
-	while (s1[i] != '\0')
-		i++;
-	while (s2[ji] != '\0')
-		ji++;
+	size = (_strlen(s1) + _strlen(s2) + 1);
 
-	concat = malloc(sizeof(char) * (i + ji + 1));
+	dst = (char *) malloc(size * sizeof(char));
 
-	if (concat == NULL)
+	if (dst == 0)
+	{
 		return (NULL);
-	i = ji = 0;
-	while (s1[i] != '\0')
+	}
+	for (i = 0; *(s1 + i) != '\0'; i++)
+		*(dst + i) = *(s1 + i);
+
+	for (j = 0; *(s2 + j) != '\0'; j++)
 	{
-		concat[i] = s1[i];
+		*(dst + i) = *(s2 + j);
 		i++;
 	}
-
-	while (s2[ji] != '\0')
-	{
-		concat[i] = s2[ji];
-		i++, ji++;
-	}
-	concat[i] = '\0';
-	return (concat);
+	return (dst);
 }
