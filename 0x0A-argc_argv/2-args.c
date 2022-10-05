@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints all arguments it recieves
+ * main - print the name of the programe
  * @argc: argument count
  * @argv: argument vector
  *
@@ -10,11 +11,12 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
+	int count = 0;
 
-	for(i = 0; 1 < argc; i++)
+	if (argc > 0)
 	{
-		printf("%s\n", argv[i]);
+		while (count < argc)
+			printf("%s\n", argv[count]);
 	}
 	return (0);
 }
