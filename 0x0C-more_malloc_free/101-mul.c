@@ -2,8 +2,8 @@
 
 /**
  * main - multiplies two positive numbers
- * @argc: arguments count
- * @argv: argument vector
+ * @argc: n arguments
+ * @argv: args
  *
  * Return: int
  */
