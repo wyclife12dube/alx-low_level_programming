@@ -22,7 +22,6 @@ listint_t *reverse_listint(listint_t **head)
 		*head = n;
 	}
 	*head = p;
-	
 	return (*head);
 
 }
